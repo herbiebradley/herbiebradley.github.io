@@ -988,6 +988,30 @@ pre code {
   background-color: #515151;
 }
 
+.contact .contact-title .sidebarmenu {
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.contact .contact-title .sidebarmenu a {
+   font-weight: 400;
+   margin: 0 0 10px;
+   line-height: 1.3;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #515151;
+}
+
+.contact .contact-title .sidebarmenu a:hover {
+   font-weight: 400;
+   margin: 0 0 10px;
+   line-height: 1.3;
+   text-decoration: underline;
+   text-transform: uppercase;
+   background-color: transparent;
+}
+
 .contact ul {
   margin: 0;
   padding: 0;
