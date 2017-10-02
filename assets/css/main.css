@@ -1146,28 +1146,18 @@ footer .copyright {
    position: relative;
 }
 
-.header-page .page-sidebarmenu a:hover {
-   color: #515151;   
-}
-
-.header-page .page-sidebarmenu a:before {
-  content: "";
+.header-page .page-sidebarmenu a:after {
+  content: '';
   position: absolute;
-  width: 100%;
-  height: 2px;
   bottom: 0;
   left: 0;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  width: 0%;
+  border-bottom: 2px solid #515151;
+  transition: 0.4s;
 }
 
-.header-page .page-sidebarmenu a:hover:befroe {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+.header-page .page-sidebarmenu a:hover:after {
+  width: 100%;
 }
 
 .header-page .page-date {
