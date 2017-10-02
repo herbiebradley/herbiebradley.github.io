@@ -15,4 +15,4 @@ A long loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong descrip
 
 content
 
-[Linl 2](https://shaoanlu.github.io/flexible-jekyll/the-best-organizer-software/)
+[Link 2](https://shaoanlu.github.io/flexible-jekyll/the-best-organizer-software/)
