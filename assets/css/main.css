@@ -1114,13 +1114,7 @@ footer .copyright {
   line-height: 1.3;
 }
 
-.header-page .page-sidebar {
-  font-weight: 400;
-  margin: 0 0 10px;
-  line-height: 1.3;
-}
-
-.header-page .page-sidebar a {
+.header-page .page-title a {
    font-weight: 400;
    margin: 0 0 10px;
    line-height: 1.3;
@@ -1129,7 +1123,7 @@ footer .copyright {
    color: #515151;
 }
 
-.header-page .page-sidebar a:hover {
+.header-page .page-title a:hover {
    font-weight: 400;
    margin: 0 0 10px;
    line-height: 1.3;
