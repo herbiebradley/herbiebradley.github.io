@@ -2,6 +2,7 @@
 layout: main
 ---
 {% for post in site.posts %}
+{% if post.type != "project" %}
 <article class="post">
   {% if post.img %}
     <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
@@ -14,4 +15,5 @@ layout: main
     <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
   </div>
 </article>
+{% endif %}
 {% endfor %}
