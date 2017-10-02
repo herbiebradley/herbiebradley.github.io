@@ -7,7 +7,8 @@ img:  we-in-rest.jpg # Add image post (optional)
 tags: # add tag
 ---
 
-A long loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description here. Another long loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description here.
+How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview.
+
 
 # Font1
 
