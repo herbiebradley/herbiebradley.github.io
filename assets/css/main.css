@@ -1132,13 +1132,23 @@ footer .copyright {
    background-color: transparent;   
 }
 
-.header-page .page-title a:hover:befroe {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+.header-page .page-sidebarmenu {
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1.3;  
 }
 
-.header-page .page-title a:before {
+.header-page .page-sidebarmenu a {
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #515151;   
+}
+
+.header-page .page-sidebarmenu a:hover {
+   background-color: transparent;   
+}
+
+.header-page .page-sidebarmenu a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1150,6 +1160,12 @@ footer .copyright {
   transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+}
+
+.header-page .page-sidebarmenu a:hover:befroe {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .header-page .page-date {
