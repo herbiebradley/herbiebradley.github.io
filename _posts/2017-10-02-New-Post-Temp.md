@@ -16,6 +16,6 @@ Article perview contians 15 words. Article perview contians 15 words. Article pe
 
 content
 
-[Link 1]({{site.baseurl}}/)
+[Link 1]({{site.url}}/)
 
 [Link 2](https://shaoanlu.github.io/the-best-organizer-software/)
