@@ -988,13 +988,13 @@ pre code {
   background-color: #515151;
 }
 
-.contact .contact-title .sidebarmenu {
+.contact .contact-title .contact-sidebarmenu {
   font-weight: 400;
   margin: 0 0 10px;
   line-height: 1.3;
 }
 
-.contact .contact-title .sidebarmenu a {
+.contact .contact-title .contact-sidebarmenu a {
    font-weight: 400;
    margin: 0 0 10px;
    line-height: 1.3;
@@ -1003,7 +1003,7 @@ pre code {
    color: #515151;
 }
 
-.contact .contact-title .sidebarmenu a:hover {
+.contact .contact-title .contact-sidebarmenu a:hover {
    font-weight: 400;
    margin: 0 0 10px;
    line-height: 1.3;
