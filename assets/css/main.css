@@ -1135,7 +1135,7 @@ footer .copyright {
    line-height: 1.3;
    text-decoration: underline;
    text-transform: uppercase;
-   color: #515151;
+   background-color: transparent;
 }
 
 .header-page .page-date {
