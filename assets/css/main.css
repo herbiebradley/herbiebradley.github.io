@@ -1136,16 +1136,18 @@ footer .copyright {
   font-weight: 400;
   margin: 0 0 10px;
   line-height: 1.3;  
+  color: #515151;  
 }
 
 .header-page .page-sidebarmenu a {
    text-decoration: none;
    text-transform: uppercase;
-   color: #515151;   
+   color: #515151; 
+   position: relative;
 }
 
 .header-page .page-sidebarmenu a:hover {
-   background-color: transparent;   
+   color: #515151;   
 }
 
 .header-page .page-sidebarmenu a:before {
