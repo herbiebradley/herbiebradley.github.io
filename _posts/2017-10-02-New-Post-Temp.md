@@ -19,3 +19,5 @@ content
 [Link 1]({{site.url}})
 
 [Link 2](https://shaoanlu.github.io/the-best-organizer-software/)
+
+[Link 3]({{site.url}}/about)
