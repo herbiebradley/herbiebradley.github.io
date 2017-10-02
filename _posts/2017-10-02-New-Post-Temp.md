@@ -7,7 +7,7 @@ img:  we-in-rest.jpg # Add image post (optional)
 tags: # add tag
 ---
 
-How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview. How long a sentence should be as perview.
+Article perview contians 15 words. Article perview contians 15 words. Article perview contians 15 words. Article perview contians 15 words. Article perview contians 15 words. 
 
 
 # Font1
