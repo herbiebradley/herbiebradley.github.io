@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: About
 date: 
 description: About me. # Add post description (optional)
 img:  # Add image post (optional)
