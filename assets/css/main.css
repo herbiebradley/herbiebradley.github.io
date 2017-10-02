@@ -1130,14 +1130,9 @@ footer .copyright {
    text-decoration: underline;
    text-transform: uppercase;
    background-color: transparent;
-}
-
-.header-page .page-title::before {
-  display: block;
-}
-
-.header-page .page-title::after {
-  display: block;
+   -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+   transform: scale(1.2);
 }
 
 .header-page .page-date {
