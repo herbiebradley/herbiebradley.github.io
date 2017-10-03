@@ -845,6 +845,18 @@ pre code {
    color: #515151
 }
 
+.paginatoin a{
+   text-decoratoin: none;
+   text-align: center;
+   color: #515151
+}
+
+.paginatoin li{
+   text-decoratoin: none;
+   text-align: center;
+   color: #515151
+}
+
 .sidebar {
   display: -webkit-box;
   display: -webkit-flex;
