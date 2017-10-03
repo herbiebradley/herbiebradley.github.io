@@ -6,6 +6,8 @@ Add sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible
 
 ![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll.gif)
 
+![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll2.gif)
+
 ### License
 
 GNU General Public License v3.0
