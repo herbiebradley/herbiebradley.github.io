@@ -843,7 +843,7 @@ pre code {
    width: 100%;
    text-decoratoin: none;
    color: #515151;
-   display: flex;
+   display: block;
    text-align: left;
 }
 
