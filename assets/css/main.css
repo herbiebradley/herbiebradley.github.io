@@ -839,12 +839,16 @@ pre code {
 }
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
+.cnotainer {
+   width: 100%;
+   text-align: center;
+}
+
 .pagination {
    width: 100%;
    text-decoratoin: none;
    color: #515151;
    display: inline-block;
-   text-align: left;
 }
 
 .pagination a{
