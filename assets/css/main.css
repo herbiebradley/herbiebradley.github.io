@@ -841,7 +841,7 @@ pre code {
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .container {
    width: 100%;
-   text-align: left;
+   text-align: right;
 }
 
 .pagination {
