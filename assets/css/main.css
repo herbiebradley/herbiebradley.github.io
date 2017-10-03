@@ -862,11 +862,11 @@ pre code {
           transform: scale(1.2);
 }
 
-.pagination .newer-post {
+.pagination .newer-posts {
    color: #c1c1c1;
 }
 
-.pagination .older-post {
+.pagination .older-posts {
    color: #c1c1c1;
 }
 
