@@ -6,7 +6,7 @@ Add responsive sidebar menu for [Flexible-Jekyll](https://github.com/artemshelud
 
 ![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll.gif)
 
-![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll2.gif)
+![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll3.gif)
 
 ### License
 
