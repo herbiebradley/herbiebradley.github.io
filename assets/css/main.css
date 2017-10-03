@@ -843,13 +843,15 @@ pre code {
    width: 100%;
    text-decoratoin: none;
    color: #515151;
-   display: block;
+   display: inline-block;
    text-align: left;
 }
 
 .pagination a{
   text-decoratoin: none;
+  text-align: left;
   color: #515151;
+  display: inline-block;
   font-size: 18px;
 }
 
