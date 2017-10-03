@@ -840,16 +840,16 @@ pre code {
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .pagination {
+   width: 100%
    text-decoratoin: none;
    color: #515151;
+   display: flex;
+   text-align: right;
 }
 
 .pagination a{
-  width: 100%
-  max-width: 100%;
   text-decoratoin: none;
   color: #515151;
-  padding: 5px;
   font-size: 18px;
 }
 
