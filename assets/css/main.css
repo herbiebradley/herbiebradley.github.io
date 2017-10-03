@@ -427,12 +427,6 @@ template {
   display: none;
 }
 
-.paginatoin {
-   text-decoratoin: none;
-   text-align: center;
-   color: #515151
-}
-
 /* Hidden
    ========================================================================== */
 /**
@@ -845,6 +839,12 @@ pre code {
 }
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
+.paginatoin {
+   text-decoratoin: none;
+   text-align: center;
+   color: #515151
+}
+
 .sidebar {
   display: -webkit-box;
   display: -webkit-flex;
