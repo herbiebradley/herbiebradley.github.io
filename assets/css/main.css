@@ -840,7 +840,6 @@ pre code {
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .pagination {
-   width: 70%
    text-decoratoin: none;
    text-align: center;
    color: #515151;
@@ -848,6 +847,8 @@ pre code {
 }
 
 .pagination a{
+  width: 100%
+  max-width: 100%;
   text-decoratoin: none;
   text-align: center;
   color: #515151;
