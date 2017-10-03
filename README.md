@@ -2,9 +2,11 @@
 
 ## Demo
 
-Add responsive sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll/) theme
+Add sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll/) theme
 
 ![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll.gif)
+
+The responsive sidebar menu looks like:
 
 ![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll3.gif)
 
