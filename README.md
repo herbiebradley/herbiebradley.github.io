@@ -2,7 +2,7 @@
 
 ## Demo
 
-Add sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll/) theme
+Add responsive sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll/) theme
 
 ![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll.gif)
 
