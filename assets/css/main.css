@@ -842,6 +842,7 @@ pre code {
 .container {
    width: 100%;
    text-align: left;
+   paddnig: 20px;
 }
 
 .pagination {
