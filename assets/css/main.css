@@ -839,20 +839,22 @@ pre code {
 }
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
-.pagination {
+.pagination ul il {
    text-decoratoin: none;
    color: #515151;
+   display: inline-block;
 }
 
-.pagination a{
+.pagination ul li a{
   text-decoratoin: none;
+  display: block;
   color: #515151;
   padding: 5px;
   font-size: 18px;
 }
 
-.pagination a:hover {
-  color: #333030;
+.pagination ul li a:hover {
+  color: #c1c1c1;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
