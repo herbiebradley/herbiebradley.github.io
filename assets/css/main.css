@@ -1382,6 +1382,10 @@ footer .copyright {
   .contact-title, .copyright {
     display: none;
   }
+   
+  .header-page .page-sidebarmenu {
+     display: inline
+  }
 }
 
 /* Extra Small Devices, Phones */
