@@ -841,7 +841,7 @@ pre code {
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .container {
    width: 100%;
-   text-align: middle;
+   text-align: center;
 }
 
 .pagination {
@@ -853,7 +853,7 @@ pre code {
 
 .pagination a{
   text-decoratoin: none;
-  text-align: middle;
+  text-align: left;
   color: #515151;
   display: inline-block;
   font-size: 18px;
