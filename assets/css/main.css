@@ -855,8 +855,6 @@ pre code {
 .pagination a:hover {
   color: #515151;   
   -webkit-transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
-  -o-transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
-  transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
