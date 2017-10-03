@@ -1,6 +1,6 @@
 <div class="container">
   <nav class="pagination" role="pagination">
-    <ul>
+    
       {% if paginator.previous_page %}
       
         {% if paginator.previous_page == 1 %}
@@ -16,6 +16,6 @@
       <a class="older-posts" href="{{ site.baseurl }}/page/{{ paginator.next_page }}/"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
       {% endif %}
       
-    </ul>
+    
   </nav>
 </div>
