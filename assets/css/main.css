@@ -841,16 +841,13 @@ pre code {
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .pagination {
    text-decoratoin: none;
-   text-align: center;
    color: #515151;
-   display: inline-block;   
 }
 
 .pagination a{
   width: 100%
   max-width: 100%;
   text-decoratoin: none;
-  text-align: center;
   color: #515151;
   padding: 5px;
   font-size: 18px;
