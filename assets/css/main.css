@@ -427,6 +427,10 @@ template {
   display: none;
 }
 
+paginatoin {
+   text-decoratoin: none;
+}
+
 /* Hidden
    ========================================================================== */
 /**
