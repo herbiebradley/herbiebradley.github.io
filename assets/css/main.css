@@ -429,6 +429,8 @@ template {
 
 .paginatoin {
    text-decoratoin: none;
+   text-align: center;
+   color: #515151
 }
 
 /* Hidden
