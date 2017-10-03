@@ -853,7 +853,7 @@ pre code {
 
 .pagination a{
   text-decoratoin: none;
-  text-align: left;
+  text-align: middle;
   color: #515151;
   display: inline-block;
   font-size: 18px;
