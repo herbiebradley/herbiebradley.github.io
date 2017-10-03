@@ -840,6 +840,7 @@ pre code {
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .pagination {
+   width: 70%
    text-decoratoin: none;
    text-align: center;
    color: #515151;
