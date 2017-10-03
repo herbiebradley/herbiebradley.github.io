@@ -8,7 +8,7 @@ Add sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible
 
 The responsive sidebar menu looks like:
 
-![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll3.gif)
+![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll2.gif)
 
 ### License
 
