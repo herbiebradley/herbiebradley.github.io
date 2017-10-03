@@ -2,7 +2,7 @@
   <nav class="pagination" role="pagination">
     <ul>
       {% if paginator.previous_page %}
-        <p>
+      
         {% if paginator.previous_page == 1 %}
         <a class="newer-posts" href="{{ site.baseurl }}/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
         {% else %}
@@ -15,7 +15,7 @@
       {% if paginator.next_page %}
       <a class="older-posts" href="{{ site.baseurl }}/page/{{ paginator.next_page }}/"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
       {% endif %}
-      </p>
+      
     </ul>
   </nav>
 </div>
