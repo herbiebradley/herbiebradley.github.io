@@ -1,5 +1,5 @@
 title: Herbie Bradley
-description: test
+description: A CS, Maths and Machine Learning Blog
 permalink: /:title/
 baseurl: "" # the subpath of your site, e.g. /flexible-jekyll
 url: "https://herbiebradley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -23,7 +23,6 @@ google_analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
-remote_theme: shaoanlu/shaoanlu.github.io
 gems:
   - jekyll-sitemap
   - jekyll-paginate
