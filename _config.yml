@@ -23,6 +23,7 @@ google_analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
+remote_theme: shaoanlu/shaoanlu.github.io
 gems:
   - jekyll-sitemap
   - jekyll-paginate
