@@ -23,10 +23,11 @@ google_analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
+  - jekyll-seo-tag
 
 paginate: 7
 paginate_path: "/page/:num"
