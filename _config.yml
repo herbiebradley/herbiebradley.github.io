@@ -23,6 +23,7 @@ google_analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
+highlighter: rouge
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
