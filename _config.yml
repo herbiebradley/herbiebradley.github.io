@@ -16,10 +16,10 @@ wordpress: #
 email: # add your Email address
 
 # Disqus
-discus-identifier: # add your discus identifier
+disqus-identifier: # add your discus identifier
 
 # Tracker
-google_analytics: # Google Analytics
+google-analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
