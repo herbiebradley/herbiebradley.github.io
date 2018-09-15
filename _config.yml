@@ -9,16 +9,15 @@ author: Herbie Bradley
 author-img: avatar.jpg
 about-author: Computer Science and Maths student at Keele University (2019)
 twitter: herbiebradley
-facebook:
 github: herbiebradley
 linkedin: herbiebradley
 email: mail@herbiebradley.com
 
 # Disqus
-disqus-identifier: 
+disqus-identifier:
 
-# Tracker
-google-analytics:
+# Google Analytics
+google-analytics: UA-125794731-1
 
 # Build Settings
 markdown: kramdown
