@@ -23,4 +23,7 @@
     <link href="/assets/css/syntax.css" rel="stylesheet" >
     {% feed_meta %}
     {% seo %}
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
 </head>
