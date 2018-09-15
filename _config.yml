@@ -2,23 +2,23 @@ title: Herbie Bradley
 description: A Computer Science, Maths, and Machine Learning Blog
 permalink: /:title/
 baseurl: "" # the subpath of your site, e.g. /flexible-jekyll
-url: "https://herbiebradley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://herbiebradley.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
-author: Herbie Bradley # add your name
-author-img: avatar.jpg # add your photo
+author: Herbie Bradley
+author-img: avatar.jpg
 about-author: Computer Science and Maths student at Keele University (2019)
-twitter: herbiebradley # add your Twitter handle
-facebook: # add your Facebook handle
-github: herbiebradley # add your Github handle
-linkedin: herbiebradley # add your Linkedin handle
-email: hyperionbradley@gmail.com # add your Email address
+twitter: herbiebradley
+facebook:
+github: herbiebradley
+linkedin: herbiebradley
+email: mail@herbiebradley.com
 
 # Disqus
-disqus-identifier: # add your discus identifier
+disqus-identifier: 
 
 # Tracker
-google-analytics: # Google Analytics
+google-analytics:
 
 # Build Settings
 markdown: kramdown
