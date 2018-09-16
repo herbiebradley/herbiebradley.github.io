@@ -30,6 +30,7 @@ plugins:
 
 paginate: 7
 paginate_path: "/page/:num"
+show_drafts: false
 
 exclude:
   - Gemfile
