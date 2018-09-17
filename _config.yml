@@ -14,7 +14,7 @@ linkedin: herbiebradley
 email: mail@herbiebradley.com
 
 # Disqus
-disqus-identifier:
+disqus-identifier: herbiebradley
 
 # Google Analytics
 google-analytics: UA-125794731-1
@@ -31,6 +31,9 @@ plugins:
 paginate: 7
 paginate_path: "/page/:num"
 show_drafts: false
+
+# Front Matter Defaults
+
 
 exclude:
   - Gemfile
