@@ -441,6 +441,8 @@ template {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   margin: 0;
+  max-width: 60vw;
+  overflow-x: auto;
 }
 
 .highlighter-rouge {
@@ -448,7 +450,7 @@ template {
   font-weight: 400;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  padding: 0.1rem 0.5rem;
+  padding: 0.0rem 0.0rem;
 }
 
 .highlight .hll {
@@ -763,12 +765,14 @@ template {
 }
 
 *, *::after, *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
   line-height: 1.5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -795,11 +799,11 @@ blockquote {
   padding-left: 1.1rem;
   margin-left: 1rem;
   font-style: italic;
-  color: #ada8a8;
+  color: #707070;
 }
 
 pre {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.6rem;
   overflow-x: auto;
 }
 
@@ -1134,8 +1138,8 @@ footer .copyright {
 
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
-  padding-left: 70px; /* 20 px default total for padding */
-  padding-right: 70px;
+  margin-left: 70px; /* 20 px default total for padding */
+  margin-right: 70px;
 }
 
 .header-page {
