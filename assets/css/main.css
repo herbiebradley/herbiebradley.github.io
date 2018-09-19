@@ -1425,10 +1425,6 @@ footer .copyright {
   .header-page .page-sidebarmenu {
      display: inline
   }
-  .highlight {
-    max-width: 80vw;
-    overflow-x: auto;
-  }
 }
 
 /* Extra Small Devices, Phones */
