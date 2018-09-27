@@ -10,10 +10,4 @@ permalink: /about/
 comments: false
 ---
 
-About me
-
-content here.
-
-# Head 1
-
-## Head 2
+## TODO: About page
