@@ -7,11 +7,22 @@ url: "https://herbiebradley.com" # the base hostname & protocol for your site, e
 # Author Settings
 author: Herbie Bradley
 author-img: avatar.jpg
+logo: avatar.jpg
 about-author: Computer Science and Maths student at Keele University (2019)
-twitter: herbiebradley
-github: herbiebradley
+twitter:
+  username: herbiebradley
+  card: summary
+social-github: herbiebradley # site.github comes with repo metadata using Github pages
 linkedin: herbiebradley
 email: mail@herbiebradley.com
+
+# Social profile for Google search results
+social:
+  name: Herbie Bradley
+  links:
+    - https://twitter.com/herbiebradley
+    - https://www.linkedin.com/in/herbiebradley
+    - https://github.com/herbiebradley
 
 # Disqus
 disqus-identifier: herbiebradley
@@ -27,13 +38,22 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
+  # - jemoji
 
 paginate: 7
 paginate_path: "/page/:num"
 show_drafts: false
 
 # Front Matter Defaults
-
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      author:
+          twitter: herbiebradley
 
 exclude:
   - Gemfile
