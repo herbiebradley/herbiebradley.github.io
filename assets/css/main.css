@@ -441,8 +441,6 @@ template {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   margin: 0;
-  max-width: 60vw;
-  overflow-x: auto;
 }
 
 .highlighter-rouge {
@@ -765,14 +763,12 @@ template {
 }
 
 *, *::after, *::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
   line-height: 1.5;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 body {
@@ -794,6 +790,15 @@ img {
   display: inline-block;
 }
 
+img + em {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 blockquote {
   border-left: 5px solid #000;
   padding-left: 1.1rem;
@@ -804,13 +809,77 @@ blockquote {
 
 pre {
   padding: 0.8rem 1.6rem;
-  overflow-x: auto;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+table {
+  border: 1px solid #aaa;
+  background-color: #eee;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table td, table.blueTable th {
+  border: 1px solid #aaa;
+  padding: 3px 2px;
+}
+
+table tbody td {
+  font-size: 13px;
+}
+
+table tr:nth-child(even) {
+  background: #adbecc;
+}
+
+table thead {
+  background: #a9c4d1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bed3dc), color-stop(66%, #b1cad5), to(#A9C4D1));
+  background: -webkit-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  background: -o-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  border-bottom: 1px solid #8c8c8c;
+}
+
+table thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-left: 1px solid #d0e4f5;
+}
+
+table thead th:first-child {
+  border-left: none;
+}
+
+table tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: #d0e4f5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#D0E4F5));
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -o-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444;
+}
+
+table tfoot td {
+  font-size: 14px;
 }
 
 .wrapper {
@@ -849,13 +918,13 @@ pre code {
 
 .pagination {
    width: 100%;
-   text-decoratoin: none;
+   text-decoration: none;
    color: #515151;
    display: inline-block;
 }
 
 .pagination a{
-  text-decoratoin: none;
+  text-decoration: none;
   text-align: left;
   color: #515151;
   display: inline-block;
@@ -1137,9 +1206,9 @@ footer .copyright {
 }
 
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
-.wrap-content {
-  margin-left: 70px; /* 20 px default total for padding */
-  margin-right: 70px;
+.page-content {
+  padding-left: 70px; /* 20 px default total for padding */
+  padding-right: 70px;
 }
 
 .header-page {
@@ -1213,6 +1282,23 @@ footer .copyright {
   max-height: 500px;
   background-color: #fafafa;
   overflow: hidden;
+}
+
+.page-cover-image figure {
+  position: relative;
+  margin: 0;
+}
+
+.page-cover-image figcaption {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 .page-cover-image .page-image {
@@ -1424,10 +1510,6 @@ footer .copyright {
 
   .header-page .page-sidebarmenu {
      display: inline
-  }
-  .highlight {
-    max-width: 80vw;
-    overflow-x: auto;
   }
 }
 
