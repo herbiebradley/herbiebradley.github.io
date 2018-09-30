@@ -52,8 +52,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author:
-          twitter: herbiebradley
+      author: Herbie Bradley
 
 exclude:
   - Gemfile
