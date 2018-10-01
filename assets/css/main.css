@@ -809,20 +809,14 @@ blockquote {
 
 pre {
   padding: 0.8rem 1.6rem;
-  overflow: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow-x: auto
 }
 
 pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  overflow: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow-x: auto
 }
 
 table {
@@ -889,6 +883,7 @@ table tfoot td {
 
 .post, .article-page {
   background-color: #fff;
+  width: 100%
 }
 
 ::-moz-selection {
