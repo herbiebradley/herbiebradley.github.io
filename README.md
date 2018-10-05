@@ -1,4 +1,4 @@
-My personal blog and website using Jekyll and the Flexible Jekyll theme.
+My personal blog and website using Jekyll.
 
 Base theme is [Flexible-Jekyll by Artem Shekludko](https://github.com/artemsheludko/flexible-jekyll) with further modifications by [SA Lu](https://github.com/shaoanlu).
 
