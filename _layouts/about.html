@@ -1,0 +1,57 @@
+---
+layout: main
+---
+{% if page.mathjax %}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{% endif %}
+<article class="article-page">
+  <div class="page-content">
+    {% if page.image %}
+    <div class="page-cover-image">
+        <figure>
+          <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.image}} alt="{{page.title}}">
+          {% if page.fig-caption %}
+            <figcaption>{{page.fig-caption}}</figcaption>
+          {% endif %}
+        </figure>
+    </div> <!-- End Page Cover Image -->
+    {% else %}
+    {% endif %}
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">{{page.title}}</h1>
+        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      {{ content | markdownify}}
+      <div class="page-footer">
+        {% if page.type != "about" %}
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter.username }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}" title="Share on Reddit" rel="nofollow" target="_blank">Reddit</a>
+        </div>
+        {% endif %}
+        <div class="page-tag">
+          {% for tag in page.tags %}
+            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% if site.disqus-identifier %}
+        {% include disqus.html %}
+      {% endif %}
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+  <p><small><small><center>Base theme is <a href="https://github.com/artemsheludko/flexible-jekyll">Flexible-Jekyll</a> by Artem Shekludko with further modifications by <a href="https://github.com/shaoanlu">SA Lu</a>.</center></small></small></p>
+  <p><small><small><center>Favicon is <a href="https://thenounproject.com/term/neural-network/1503825/">Neural Network</a> by sachin modgekar from <a href="thenounproject.com">the Noun Project</a>.</center></small></small></p>
+</article> <!-- End Article Page -->
