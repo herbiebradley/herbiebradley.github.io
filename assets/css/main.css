@@ -772,7 +772,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #515151;
   background-color: #fbfbfb;
   margin: 0;
@@ -877,7 +877,7 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 1250px;
+  max-width: 1450px;
   position: relative;
 }
 
@@ -1505,6 +1505,10 @@ footer .copyright {
 
   .header-page .page-sidebarmenu {
      display: inline
+  }
+  .page-content {
+    padding-left: 10px; /* 20 px default total for padding */
+    padding-right: 10px;
   }
 }
 
