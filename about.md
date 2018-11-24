@@ -9,7 +9,7 @@ mathjax: true
 comments: false
 ---
 
-I'm a Computer Science and Mathematics student at Keele University. I'm interested in computer vision, generative models, deep learning, and much more.
+I'm a Computer Science and Mathematics student at Keele University, interested in computer vision, generative models, deep learning, and much more.
 I'm currently working on my final undergraduate project, which is looking at ways to use generative adversarial networks on image translation tasks such as photo$\Leftrightarrow$painting,
 summer$\Leftrightarrow$winter, and horse$\Leftrightarrow$zebra.
 
@@ -18,7 +18,7 @@ summer$\Leftrightarrow$winter, and horse$\Leftrightarrow$zebra.
 ## This Blog
 
 I mostly intend this blog to be a place to post about things I'm studying, in the hope that writing about them will lead to a deeper understanding.
-I will also occasionally post about projects I'm working on
+I will also occasionally post about projects I'm working on.
 
   [62521714]: {{ site.url }}/assets/pdfs/HerbieBradleyCV.pdf "Herbie Bradley CV"
   [80aa55fa]: https://twitter.com/{{ site.twitter.username }} "@herbiebradley"
