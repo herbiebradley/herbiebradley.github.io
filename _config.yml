@@ -1,6 +1,6 @@
 title: Herbie Bradley
 description: A Computer Science, Maths, and Machine Learning Blog
-permalink: /:title/
+permalink: /:title
 baseurl: "" # the subpath of your site, e.g. /flexible-jekyll
 url: "https://herbiebradley.com" # the base hostname & protocol for your site, e.g. http://example.com
 
