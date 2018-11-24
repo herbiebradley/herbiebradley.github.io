@@ -904,6 +904,10 @@ table tfoot td {
 .clearfix::after {
   clear: both;
 }
+.center-footnote {
+    text-align: center;
+    font-size: 10px;
+}
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .container {

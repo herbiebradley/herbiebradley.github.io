@@ -2,17 +2,17 @@
 layout: main
 ---
 {% if page.mathjax %}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    processEscapes: true
-  }
-});
-</script>
-<script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+    }
+    });
+    </script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 {% endif %}
 <article class="article-page">
   <div class="page-content">
@@ -52,6 +52,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
       {% endif %}
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->
-  <p><small><small><center>Base theme is <a href="https://github.com/artemsheludko/flexible-jekyll">Flexible-Jekyll</a> by Artem Shekludko with further modifications by <a href="https://github.com/shaoanlu">SA Lu</a>.</center></small></small></p>
-  <p><small><small><center>Favicon is <a href="https://thenounproject.com/term/neural-network/1503825/">Neural Network</a> by sachin modgekar from <a href="thenounproject.com">the Noun Project</a>.</center></small></small></p>
+  <div class="center-footnote">
+  <p>Base theme is <a href="https://github.com/artemsheludko/flexible-jekyll">Flexible-Jekyll</a> by Artem Shekludko with further modifications by <a href="https://github.com/shaoanlu">SA Lu</a>.</p>
+  <p>Favicon is <a href="https://thenounproject.com/term/neural-network/1503825/">Neural Network</a> by sachin modgekar from <a href="thenounproject.com">the Noun Project</a>.</p>
+  </div>
 </article> <!-- End Article Page -->
