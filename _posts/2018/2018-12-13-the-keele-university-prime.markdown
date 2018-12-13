@@ -22,7 +22,7 @@ I found several scripts around the internet to generate prime numbers from pictu
 
 Next, I wrote a Python script to iterate over three digits in the middle of the bottom row and test each possibility with the Miller-Rabin probabilistic primality test. On my laptop, this computation took only a few minutes to check all 1000 combinations, and returned one possible number which was very likely to be prime. Finally, I used the [tool on Dario Alpern's website][2c613c75] to make sure that the Miller-Rabin test was correct, and the number actually was prime.
 
-I also tried iterating over a few other three digit sequences in the number and found several primes there too, but I decided the prime shown above looked the best. I searched through several different fonts, and in the end M[The script I used is here.][085383f2]
+I also tried iterating over a few other three digit sequences in the number and found several primes there too, but I decided the prime shown above looked the best. [The script I used is here.][085383f2]
 
 ## How does this work?
 
