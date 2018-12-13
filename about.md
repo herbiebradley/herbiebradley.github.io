@@ -17,7 +17,7 @@ summer$\Leftrightarrow$winter, and horse$\Leftrightarrow$zebra.
 
 ## This Blog
 
-I mostly intend this blog to be a place to post about things I'm studying, in the hope that writing about them will lead to a deeper understanding.
+I mostly intend this blog to be a place to post about things I'm studying, in the hope that forcing myself to write about them will lead to a deeper understanding.
 I will also occasionally post about projects I'm working on.
 
   [62521714]: {{ site.url }}/assets/pdfs/HerbieBradleyCV.pdf "Herbie Bradley CV"
