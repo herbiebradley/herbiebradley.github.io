@@ -2,9 +2,10 @@
 layout: about
 title: About Herbie
 description: I'm a Computer Science and Mathematics student at Keele University.
-image:
 type: about
 permalink: /about
+image: avatar.jpg
+header-image: false
 mathjax: true
 comments: false
 ---

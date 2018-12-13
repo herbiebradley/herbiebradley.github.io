@@ -17,6 +17,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
 <article class="article-page">
   <div class="page-content">
     {% if page.image %}
+    {% if page.header-image %}
     <div class="page-cover-image">
         <figure>
           <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.image}} alt="{{page.title}}">
@@ -25,7 +26,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
           {% endif %}
         </figure>
     </div> <!-- End Page Cover Image -->
-    {% else %}
+    {% endif %}
     {% endif %}
     <div class="wrap-content">
       <header class="header-page">
