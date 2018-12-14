@@ -1,5 +1,4 @@
 ---
-layout: "post"
 title: "The Keele University Prime"
 date: "2018-12-13 10:00"
 description: Last year, Numberphile published a video showing a prime number of 1350 digits that looks like the coat of arms of Trinity Hall College, Cambridge. Here's how I made a similar prime for my university.
