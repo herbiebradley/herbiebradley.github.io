@@ -6,8 +6,8 @@ url: "https://herbiebradley.com" # the base hostname & protocol for your site, e
 
 # Author Settings
 author: Herbie Bradley
-author-img: avatar.jpg
-logo: avatar.jpg
+author-img: logo.jpg
+logo: logo.jpg
 about-author: Computer Science and Maths student at Keele University (2019)
 twitter:
   username: herbiebradley
