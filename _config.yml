@@ -11,8 +11,8 @@ logo: avatar.jpg
 about-author: Computer Science and Maths student at Keele University (2019)
 twitter:
   username: herbiebradley
-  card: summary
-social-github: herbiebradley # site.github comes with repo metadata using Github pages
+  card: summary_large_image
+social-github: herbiebrdley # site.github comes with repo metadata using Github pages
 linkedin: herbiebradley
 email: mail@herbiebradley.com
 
