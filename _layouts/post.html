@@ -20,7 +20,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
     {% if page.header-image %}
     <div class="page-cover-image">
         <figure>
-          <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.image}} alt="{{page.title}}">
+          <img class="page-image" src={{page.image | prepend: site.baseurl}} alt="{{page.title}}">
           {% if page.fig-caption %}
             <figcaption>{{page.fig-caption}}</figcaption>
           {% endif %}
