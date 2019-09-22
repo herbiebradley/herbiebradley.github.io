@@ -8,11 +8,11 @@ url: "https://herbiebradley.com" # the base hostname & protocol for your site, e
 author: Herbie Bradley
 author-img: logo.jpg
 logo: logo.jpg
-about-author: Computer Science and Maths student at Keele University (2019)
+about-author: Data Analytics MSc student at Warwick University
 twitter:
   username: herbiebradley
   card: summary_large_image
-social-github: herbiebrdley # site.github comes with repo metadata using Github pages
+social-github: herbiebradley # site.github comes with repo metadata using Github pages
 linkedin: herbiebradley
 email: mail@herbiebradley.com
 
