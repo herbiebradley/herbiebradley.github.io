@@ -772,7 +772,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', 'Roboto', 'Oxygen', sans-serif;
   color: #515151;
   background-color: #fbfbfb;
   margin: 0;
@@ -1198,7 +1198,7 @@ footer .copyright {
 }
 
 .post .post-content .post-title a {
-  font-family: 'PT Serif', serif;
+  font-family: 'Ubuntu', 'Roboto', 'PT Serif', serif;
   text-decoration: none;
   color: #263959;
 }
@@ -1211,6 +1211,7 @@ footer .copyright {
 .page-content {
   padding-left: 70px; /* 20 px default total for padding */
   padding-right: 70px;
+  font-size: 20px;
 }
 
 .header-page {
@@ -1244,6 +1245,7 @@ footer .copyright {
 
 .header-page .page-sidebarmenu {
   font-weight: 400;
+  font-size: 1em;
   margin: 0 0 10px;
   line-height: 1.3;
   color: #515151;
@@ -1451,7 +1453,7 @@ footer .copyright {
     margin: 0 0 5px;
   }
   .post .post-content .post-title a {
-    font-size: 21px;
+    font-size: 25px;
   }
   .content-box {
       padding-left: 260px;
@@ -1558,6 +1560,6 @@ footer .copyright {
     margin: 0 0 5px;
   }
   .post .post-content .post-title a {
-    font-size: 21px;
+    font-size: 25px;
   }
 }
