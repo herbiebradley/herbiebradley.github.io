@@ -10,7 +10,7 @@ mathjax: true
 comments: false
 ---
 
-I'm an MSc student at Warwick University studying Data Analytics, interested in computer vision, generative models, deep learning, and much more.
+I'm an MSc student at Warwick University studying Data Analytics, interested in NLP, generative models, autoML and uncertainty in deep learning.
 I recently finished my final undergraduate project, looking at ways to use generative adversarial networks on image translation tasks such as photo$\Leftrightarrow$painting,
 summer$\Leftrightarrow$winter, and horse$\Leftrightarrow$zebra.
 
