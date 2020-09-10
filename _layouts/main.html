@@ -6,9 +6,9 @@ layout: default
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author.name}}"></a>
       </div>
-      <div class="author-name">{{site.author}}</div>
+      <div class="author-name">{{site.author.name}}</div>
       <p>{{site.about-author}}</p>
       <article class="article-page"><div class="page-content"><div class="wrap-content"><div class="header-page">
           <h3 class="page-sidebarmenu"><a href="{{site.baseurl}}/">Blog</a></h3>
@@ -44,7 +44,7 @@ layout: default
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+      <p>{{site.time | date: '%Y'}} &copy; {{site.author.name}}</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->

@@ -1,14 +1,16 @@
 title: Herbie Bradley
-description: A Computer Science, Maths, and Machine Learning Blog
+description: A Machine Learning, Computer Science, and Maths Blog
 permalink: /:title
 baseurl: "" # the subpath of your site, e.g. /flexible-jekyll
 url: "https://herbiebradley.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
-author: Herbie Bradley
+author:
+  twitter: herbiebradley
+  name: Herbie Bradley
 author-img: logo.jpg
 logo: logo.jpg
-about-author: Data Analytics MSc student at Warwick University
+about-author: PhD student in AI for Environmental Risk at Cambridge University
 twitter:
   username: herbiebradley
   card: summary_large_image
@@ -52,8 +54,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: Herbie Bradley
       mathjax: true
+  -
+    scope:
+      path: "assets/pdfs/*.pdf"
+    values:
+      sitemap: false
 
 exclude:
   - Gemfile
@@ -61,7 +67,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-  - node_modules
   - gulpfile.js
   - package.json
-  - yarn.lock

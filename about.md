@@ -10,13 +10,11 @@ mathjax: true
 comments: false
 ---
 
-I'm an MSc student at Warwick University studying Data Analytics, interested in NLP, generative models, autoML and uncertainty in deep learning.
-In my final undergraduate project last year I looked at ways to use generative adversarial networks on image translation tasks such as photo$\Leftrightarrow$painting,
-summer$\Leftrightarrow$winter, and horse$\Leftrightarrow$zebra. I am currently working on my Master's project investigating algorithms to compress deep learning datasets, with the goal of training deep learning models faster without losing too much predictive power.
+I'm Herbie Bradley, a graduate student studying machine learning. I recently finished an MSc in Data Analytics at Warwick University, where I spent some time investigating algorithms to compress datasets with the goal of training deep learning models faster during tasks like hyperparameter searches. My main interests are generative models and meta-learning.
 
-In autumn 2020 I will be starting an MRes + PhD in [AI for the study of Environmental Risks][ai4er] at Cambridge University.
+In autumn 2020 I started an MRes + PhD in [AI for the study of Environmental Risks][ai4er] at Cambridge University, where I hope to explore ways of emulating climate models with ML.
 
-[See my CV][62521714] for more information. You can also follow me on [Twitter][80aa55fa], where I mostly retweet interesting tech news and research in machine learning.
+You can follow me on [Twitter][80aa55fa], where I mostly retweet interesting tech news and research in machine learning.
 
 ## This Blog
 
