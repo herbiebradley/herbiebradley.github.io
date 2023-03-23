@@ -1,40 +1,69 @@
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/img/favicons/apple-icon-57x57.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/img/favicons/apple-icon-60x60.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/favicons/apple-icon-72x72.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/img/favicons/apple-icon-76x76.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/img/favicons/apple-icon-114x114.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/img/favicons/apple-icon-120x120.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/img/favicons/apple-icon-144x144.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/img/favicons/apple-icon-152x152.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicons/apple-icon-180x180.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/assets/img/favicons/android-icon-192x192.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicons/favicon-32x32.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ "/assets/img/favicons/favicon-96x96.png" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicons/favicon-16x16.png" | prepend: site.baseurl }}">
-    <link rel="manifest" href="{{ "/assets/img/favicons/manifest.json" | prepend: site.baseurl }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#ffffff">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#ffffff">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-	<!-- Styles -->
-	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-    <link href="/assets/css/syntax.css" rel="stylesheet" >
-    {% feed_meta %}
-    {% seo %}
-    {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/img/favicons/apple-icon-57x57.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/img/favicons/apple-icon-60x60.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/favicons/apple-icon-72x72.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/img/favicons/apple-icon-76x76.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/img/favicons/apple-icon-114x114.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/img/favicons/apple-icon-120x120.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/img/favicons/apple-icon-144x144.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/img/favicons/apple-icon-152x152.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicons/apple-icon-180x180.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/assets/img/favicons/android-icon-192x192.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicons/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ "/assets/img/favicons/favicon-96x96.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicons/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="manifest" href="{{ "/assets/img/favicons/manifest.json" | prepend: site.baseurl }}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#ffffff">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#ffffff">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+{% if site.lato_font_load %}
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+{% endif %}
+
+<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+{% if site.mathjax %}
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+  <link rel="stylesheet" type="text/css" href="{{ "/css/tufte.css" | prepend: site.baseurl }}">
+  <!-- <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print"> -->
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>
