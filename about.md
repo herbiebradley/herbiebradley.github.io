@@ -18,7 +18,7 @@ redirect_from:
 # About
 <!-- {% marginfigure_left 'mn-id-whatever' 'assets/img/herbie.png' 'Herbie Bradley<br>Test' %} -->
 
-I am a PhD student at the University of Cambridge in the [AI4ER PhD programme][ai4er], and a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/).
+I am a 2nd year PhD student at the University of Cambridge in the [AI4ER PhD programme][ai4er], and a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/).
 
 My research interests are mostly related to large language models, including RLHF, open-endedness with LLMs, interpretability, evaluations, and more. For a list of publications see my [Semantic Scholar profile](https://www.semanticscholar.org/author/Herbie-Bradley/2070768742).
 
