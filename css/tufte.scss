@@ -238,10 +238,11 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
-ul,ol { width: 45%;
-     -webkit-padding-start: 5%;
+ul,ol { width: 90%;
+     -webkit-padding-start: 2%;
      -webkit-padding-end: 5%;
-     list-style-type: none; }
+      // list-style-type: None;
+    }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
