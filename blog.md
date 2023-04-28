@@ -4,11 +4,11 @@ header-title: Blog
 # Note that this index page uses a full-width layout!
 ---
 
-  <h1 class="content-listing-header sans"></h1>
+  <!-- <h1 class="content-listing-header sans"></h1> -->
   <ul class="content-listing">
     {% assign left_posts = site.posts | where: "main", true %}
     {% assign right_posts = site.posts | where: "main", false %}
-    <li class="left-column">Main Sequence
+    <li class="left-column"><h1 class="content-listing-header sans">Main Sequence</h1>
       <hr class="slender">
         {% for post in left_posts %}
             <div class="post-container">
@@ -17,7 +17,7 @@ header-title: Blog
             </div>
         {% endfor %}
     </li>
-    <li class="right-column">Archive
+    <li class="right-column"><h1 class="content-listing-header sans">Archive</h1>
       <hr class="slender">
         {% for post in right_posts %}
             <div class="post-container">
