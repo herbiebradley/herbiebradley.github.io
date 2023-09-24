@@ -19,7 +19,7 @@ redirect_from:
 <!-- {% marginfigure_left 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
 
 I am a 2nd year PhD student at the University of Cambridge in the [Cambridge Applied Machine Learning Lab](https://caml-lab.com/) in the Department of Engineering with the [AI4ER PhD programme][ai4er].
-Formerly, I did a variety of language model research at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/), including the design and development of [OpenELM](https://github.com/CarperAI/OpenELM), a framework for the generation of diverse and high-quality synthetic data with LLMs.
+Throughout 2022 and 2023 I was a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/) working on large language models, including the design and development of [OpenELM](https://github.com/CarperAI/OpenELM), a framework for the generation of diverse and high-quality synthetic data with LLMs.
 
 My research interests are primarily related to large language models, including reinforcement learning from human feedback (RLHF), open-endedness with LLMs, interpretability, evaluations, AI governance, and more. For a list of publications see my [Semantic Scholar profile](https://www.semanticscholar.org/author/Herbie-Bradley/2070768742).
 
