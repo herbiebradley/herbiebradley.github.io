@@ -17,10 +17,9 @@ redirect_from:
 
 # About
 <!-- {% marginfigure_left 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
+I work at the UK AI Safety Institute, working on research to support AI governance and evaluations for advanced AI systems.
 
-I am a 3rd year PhD student at the University of Cambridge in the [Cambridge Applied Machine Learning Lab](https://caml-lab.com/), Department of Engineering with the [AI4ER PhD programme][ai4er].
-
-I build evaluations for frontier AI systems at the UK AI Safety Institute.
+I am also a 3rd year PhD student at the University of Cambridge in the [Cambridge Applied Machine Learning Lab](https://caml-lab.com/), Department of Engineering with the [AI4ER PhD programme][ai4er].
 
 Throughout 2022 and 2023 I was a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/) working on large language models, including the design and development of [OpenELM](https://github.com/CarperAI/OpenELM), a framework for the generation of diverse and high-quality synthetic data with LLMs.
 
