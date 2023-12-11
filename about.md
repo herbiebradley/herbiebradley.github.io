@@ -27,6 +27,8 @@ My research interests are primarily related to large language models, including 
 
 You can follow me on [Twitter][80aa55fa], where I mostly retweet interesting research in machine learning along with the work of myself and my collaborators.
 
+I can be contacted at mail [at] myname.com.
+
   [ai4er]: https://ai4er-cdt.esc.cam.ac.uk/ "AI for the study of Environmental Risks CDT"
   [62521714]: {{ site.url }}/assets/pdfs/HerbieBradleyCV.pdf "Herbie Bradley CV"
   [80aa55fa]: https://twitter.com/{{ site.twitter.username }} "@herbiebradley"
