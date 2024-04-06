@@ -458,7 +458,7 @@ body.full-width, .content-listing, ul.content-listing li.listing{ width: 90%;
 }
 ul.content-listing {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 10rem;
 }
@@ -551,7 +551,7 @@ hr.slender {
 /* Desktop devices (large) */
 @media (min-width: 1024px) {
   ul.content-listing {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
   }
 
