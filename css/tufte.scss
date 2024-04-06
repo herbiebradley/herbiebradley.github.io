@@ -341,7 +341,7 @@ pre { width: 52.5%; //, pre code, p pre code are both selectors in tufte.css - t
            padding-left: 2.5%;
            overflow-x: auto; }
 
-.fullwidth, li.listing div{ max-width: 90%; }
+.fullwidth, li.listing div{ max-width: 100%; }
 
 .full-width { .sidenote-right, .sidenote-number, .marginnote-right { display: none; } }
 
@@ -391,7 +391,10 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 //helper classes
 
 .contrast { color: $contrast-color;}
-.smaller { font-size: 80%;}
+.smaller {
+  font-size: 75%;
+  font-style: italic;
+}
 //Nav and Footer styling area
 
 header > nav.group, body footer {
@@ -422,7 +425,7 @@ header > nav a img{
   height: 5rem;
   position: relative;
   max-width: 100%;
-  top:-1.5rem;
+  top:-2.3rem;
 }
 ul.footer-links, .credits{
   list-style: none;
@@ -474,6 +477,7 @@ li.left-column, li.right-column {
 }
 .post-title {
   margin-bottom: 0;
+  text-align: center;
 }
 .full-width article p{
   width: 90%;
@@ -493,6 +497,7 @@ li.listing hr{
 .listing, .listing h3
 {
   display: inline-block;
+  text-align: center;
   margin:0;
 }
 li.listing {
