@@ -1,6 +1,7 @@
 ---
 layout: full-width
 header-title: Blog
+nav_exclude: true
 # Note that this index page uses a full-width layout!
 ---
 
