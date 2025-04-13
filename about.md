@@ -2,7 +2,7 @@
 layout: default
 title: About
 header-title: About
-description: i think about AGI
+description: I think about AGI
 #type: about
 #permalink: /about
 permalink: /
@@ -14,23 +14,24 @@ redirect_from:
 #comments: false
 #icon: avatar.jpg
 ---
-
-# About
 <!-- {% marginfigure_left 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
-I work on open problems in artificial general intelligence.
+I try to help make artificial general intelligence go well.
 
-Formerly, I worked at the UK AI Safety Institute (and the Frontier AI Taskforce) in the UK Government, helping to build the team, advise on AI policy, organize the Bletchley AI Safety Summit, and conduct research on evaluations for advanced AI systems.
+### Writing
 
-I'm also a final year PhD student at the University of Cambridge in the Department of Engineering, working on problems around synthetic data and large language models.
+I blog at [AI Pathways](https://www.pathwaysai.org/) with thoughts on technological development & governance, state capacity, and how we can [unfold](https://www.henrikkarlsson.xyz/p/unfolding) better futures.
 
-Throughout 2022 and 2023 I was a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/) working on large language models, including the design and development of [OpenELM](https://github.com/CarperAI/OpenELM), a framework for the generation of diverse and high-quality synthetic data with LLMs.
+### [Policy entrepeneurship](https://renaissancephilanthropy.org/playbooks/policy-entrepreneurship/)
 
-My research interests are primarily related to large language models, including reinforcement learning from human feedback (RLHF), open-endedness with LLMs, interpretability, evaluations, AI governance, and more. For a list of publications see my [Google Scholar](https://scholar.google.com/citations?user=oQ0HzPcAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Herbie-Bradley/2070768742) profiles.
+I worked at the UK AI Security Institute (and the Frontier AI Taskforce) in the UK Government from summer 2023 until October 2024, helping to build the team, advise on AI policy, organize the Bletchley Summit, and conduct research on evaluations for advanced AI systems.
 
-You can follow me on [Twitter][80aa55fa], where I mostly retweet interesting research in machine learning along with the work of myself and my collaborators.
+### Research
+
+I'm a final year PhD student at the University of Cambridge in the Department of Engineering, researching ways to make synthetic data generated with LLMs more diverse  and high quality---particularly with an interest in [open-endedness]. Much of my research is now or a list of publications see my [Google Scholar](https://scholar.google.com/citations?user=oQ0HzPcAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Herbie-Bradley/2070768742) profiles.
+
+Throughout 2022 and 2023 I was a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/). At Carper I lead a team of wonderful volunteer researchers on the design and development of [OpenELM](https://github.com/CarperAI/OpenELM), a framework for combining evolutionary algorithms with LLMs to generate diverse and high-quality synthetic data.
+
+Before that, I researched AI applications to climate science & emulation of physical simulations. Before that, I worked on Generative Adversarial Networks.
+
 
 Contact: mail [at] firstnamelastname.com.
-
-  [ai4er]: https://ai4er-cdt.esc.cam.ac.uk/ "AI for the study of Environmental Risks CDT"
-  [62521714]: {{ site.url }}/assets/pdfs/HerbieBradleyCV.pdf "Herbie Bradley CV"
-  [80aa55fa]: https://twitter.com/{{ site.twitter.username }} "@herbiebradley"
