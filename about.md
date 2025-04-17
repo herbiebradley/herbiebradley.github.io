@@ -27,7 +27,7 @@ I worked at the UK AI Security Institute (and the Frontier AI Taskforce) in the 
 
 ### Research
 
-I'm a final year PhD student at the University of Cambridge in the Department of Engineering, researching ways to make synthetic data generated with LLMs more diverse  and high quality---particularly with an interest in [open-endedness]. Much of my research is now or a list of publications see my [Google Scholar](https://scholar.google.com/citations?user=oQ0HzPcAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Herbie-Bradley/2070768742) profiles.
+I'm a final year PhD student at the University of Cambridge in the Department of Engineering, researching ways to make synthetic data generated with LLMs more diverse  and high quality---particularly with an interest in [open-endedness](https://link.springer.com/book/10.1007/978-3-319-15524-1). Much of my research is now or a list of publications see my [Google Scholar](https://scholar.google.com/citations?user=oQ0HzPcAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Herbie-Bradley/2070768742) profiles.
 
 Throughout 2022 and 2023 I was a researcher at [EleutherAI](https://www.eleuther.ai/) & [CarperAI](http://carper.ai/). At Carper I lead a team of wonderful volunteer researchers on the design and development of [OpenELM](https://github.com/CarperAI/OpenELM), a framework for combining evolutionary algorithms with LLMs to generate diverse and high-quality synthetic data.
 
