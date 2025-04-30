@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About
-header-title: About
+title: Herbie
+header-title: Herbie
 description: I think about AGI
 #type: about
 #permalink: /about
@@ -14,7 +14,7 @@ redirect_from:
 #comments: false
 #icon: avatar.jpg
 ---
-<!-- {% marginfigure_left 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
+<!-- {% marginfigure_right 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
 Hey, I'm Herbie. I try to help make artificial general intelligence go well.
 
 ### Writing
