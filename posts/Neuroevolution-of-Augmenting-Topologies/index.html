@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#ffffff">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#ffffff">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+
+  <title>Neuroevolution of Augmenting Topologies</title>
+  <meta name="description" content="A few months ago in the Spring I presented the 2002 paper Evolving Neural Networks through Augmenting Topologies (NEAT) for a class, so I thought I should ma...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+
+<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="https://herbiebradley.com/posts/Neuroevolution-of-Augmenting-Topologies/">
+
+  <link rel="alternate" type="application/rss+xml" title="Herbie Bradley" href="https://herbiebradley.com/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+  <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/herbie.png" alt="HB"></a>
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>Neuroevolution of Augmenting Topologies</h1>
+<p class="subtitle">September 22, 2019</p>
+
+<p>A few months ago in the Spring I presented the 2002 paper <a href="http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf" title="NEAT">Evolving Neural Networks through Augmenting Topologies (NEAT)</a> for a class, so I thought I should make a blog post summarising this popular algorithm for evolving the architecture of neural networks.</p>
+
+<p>To set the scene, at the time NEAT came out the approach of evolving the weights of neural networks had shown promise for benchmarks such as pole balancing. These days problems like this are usually solved using non evolutionary deep reinforcement learning techniques. Before NEAT, several papers had tried evolving the topology of networks but were not able to outperform a fixed network. NEAT was the first algorithm to do so, which is why it is frequently used and very well known.</p>
+
+<p>The authors identified 3 key problems that would need to be solved:</p>
+<ol>
+  <li>How should we encode network architectures to allow for crossover between topologies?</li>
+  <li>If we have an evolved topology that needs several generations to optimise, how can we protect that innovation and stop it from disappearing?</li>
+  <li>How can we minimise the complexity of topologies throughout evolution?</li>
+</ol>
+
+<h2 id="genetic-encoding">Genetic encoding</h2>
+
+<p>Any encoding for network architectures will fall into one of two categories, direct or indirect. A direct encoding will describe everything about an individual network - each gene will describe a node or connection in the network. An indirect encoding tends to specify the processes for creating an individual network. As a result they are more compressed and the algorithm can compute each generation faster, but if not designed carefully they can focus the search on suboptimal network topologies, creating a bias in the search space.</p>
+
+<p>The main issue with encoding neural networks as genes is the competing conventions problem: having more than one way to represent the same network. When two genomes representing the same network structure do not have the same encoding, crossover is likely to produce damaged offspring. The key insight in NEAT’s encoding is that two genes with the same historical origin represent the same structure. We can mark genes according to their history by including a global “innovation number” for each edge in the network graph, essentially a version number for each edge.</p>
+
+<p>The NEAT encoding scheme is designed to allow corresponding genes to be easily matched up during crossover.  Each genome is a list of connection genes representing edges in the graph, each of which refers to two node genes (see header image). The connection genes specify the in node, out node, weight of the edge, whether or not the edge is in the graph, and the innovation number. So the genome (or genotype) is the list of connection genes and node genes, and the phenotype is the neural network diagram.</p>
+
+<p>There are two possible mutations to a genome: adding a node or adding a connection. When any connection is added, the global innovation number is incremented and assigned to that gene. Therefore the innovation numbers represent a history of every gene in the system.</p>
+
+<h2 id="protecting-innovation">Protecting innovation</h2>
+
+<p>In a topology evolving network, adding new structure usually causes the fitness of a network to decrease, since adding a new connection (for example) causes the fitness to reduce temporarily before the connection’s weight has a chance to optimise. Several generations may be required to optimise new structure and make use of it. NEAT solves this by dividing the population into species based on topological similarity, so individuals compete with others in their own species and have a chance to optimise before they have to compete with the overall population.</p>
+
+<p>NEAT uses the innovation numbers to determine topological similarity, by calculating a compatibility distance between two genomes. This is based on the number of connection genes with different innovation numbers in each genome, along with the average weight difference between connection genes that share the same innovation number. This distance measure allows us to divide the population of genomes into species using a threshold. Genomes are tested sequentially - if a genome’s distance to a randomly chosen member of a species is less than the threshold then it is placed into this species, ensuring species do not overlap.</p>
+
+<p>As a reproduction mechanism, NEAT uses fitness sharing, where all organisms in the same species share their fitness. The original fitness for each genome is adjusted by dividing by the number of individuals in the species. Species then grow or shrink depending on how high their average adjusted fitness is. Species reproduce by first eliminating the lowest performing members, then the entire population is replaced by the offspring of the remaining organisms in each species.</p>
+
+<h2 id="minimizing-dimensionality">Minimizing dimensionality</h2>
+
+<p>Typically, topology evolving networks start with an initial population of random topologies. However, a random population has a large amount of network structure that has not been evaluated for fitness and may be completely unnecessary. Therefore, with random initialisation the algorithm may waste effort by optimising unnecessarily complex structures. NEAT’s solution to this is to start with a uniform population of networks with zero hidden nodes. New structure is introduced incrementally with mutations, and the only structures that survive are found to be useful via fitness evaluations.</p>
+
+<p>Hence NEAT minimises the complexity of not only the final network, but all intermediate networks along the way. This significantly reduces the number of generations needed to find a solution.</p>
+
+<h2 id="experiments--results">Experiments &amp; Results</h2>
+
+<p>In the NEAT paper, the algorithm was tested on single and double pole balancing tasks - a benchmark in which one or two poles are connected to a moving cart by a hinge. The objective is to move the cart left or right to keep the poles upright. NEAT was tested against two rival algorithms, Cellular Encoding, which evolves network structure, and Enforced Subpopulations, which only evolves weights. Two versions of this test were run - first allowing the network to see the cart velocity, and then hiding this information. In both tasks NEAT proved to be much more efficient than the rival algorithms. In the harder task with velocity hidden, NEAT used 25 times fewer evaluations to reach a solution than Cellular Encoding, 5 times fewer evaluations than Enforced Subpopulations, and never needed to restart. Hence NEAT showed a significant performance advantage over previous neuroevolutionary algorithms.</p>
+
+<p>NEAT was also evaluated with an ablation study - a study in which different components of the system are removed in turn to see which components are critically important. These experiments used the single pole balancing task, and tested NEAT with no growth of the topology, a random initial population rather than starting from a population with no hidden units, and a version without species. All showed worse results than the full version of NEAT, proving that all components of the algorithm are important for its performance.</p>
+
+<h2 id="discussion">Discussion</h2>
+
+<p>One thing NEAT demonstrates is that it is not the ultimate structure of the evolved network that really matters, but rather the structure of all the intermediate networks along the way to finding the solution. The connectivity of every intermediate solution represents a parameter space that evolution must optimize, and the more connections there are, the more parameters need to be optimized. Therefore, if the amount of structure can be minimized throughout evolution, so can the dimensionality of the spaces being explored, leading to significant performance gains. By starting simple and evolving the network as it becomes incrementally more complex, each increase in complexity resulting from new structure leads to a promising part of a higher dimensional space because most of the existing structure is already optimized.</p>
+
+<p>The NEAT algorithm is interesting on its own, but there are also several effective variants of the algorithm including <a href="http://axon.cs.byu.edu/~dan/778/papers/NeuroEvolution/stanley3**.pdf" title="HyperNEAT">HyperNEAT</a>, which is designed to produce large scale networks by evolving repeated patterns and structures.</p>
+
+<p>I hope this post was informative - I intend to make more posts very soon covering some deep learning models I have been studying.</p>
+
+
+
+    </article>
+    <span class="print-footer">Neuroevolution of Augmenting Topologies - September 22, 2019 - {"twitter"=>"herbiebradley", "name"=>"Herbie Bradley"}</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li>
+      
+        <li><a href="https://twitter.com/herbiebradley" target="_blank"><i class="icon-twitter" aria-hidden="true"></i></a></li>
+      
+      
+        <li class="github"><a href="http://github.com/herbiebradley" target="_blank"><i class="icon-github"></i></a></li>
+      
+      
+        <li class="linkedin"><a href="https://linkedin.com/in/herbiebradley" target="_blank"><i class="icon-linkedin"></i></a></li>
+      
+      
+        <li class="email"><a href="mailto:example@example.com"><i class="ficon-mail3" aria-hidden="true"></i></a></li>
+      
+    </li>
+<div class="credits">
+<span>&copy; 2025 Herbie Bradley</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>

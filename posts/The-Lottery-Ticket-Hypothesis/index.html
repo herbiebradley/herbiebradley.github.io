@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#ffffff">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#ffffff">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+
+  <title>The Lottery Ticket Hypothesis</title>
+  <meta name="description" content="The Lottery Ticket Hypothesis is an interesting 2019 paper by Jonathan Frankle and Michael Carbin at MIT that attempts to explain the generalisation capabili...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+
+<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="https://herbiebradley.com/posts/The-Lottery-Ticket-Hypothesis/">
+
+  <link rel="alternate" type="application/rss+xml" title="Herbie Bradley" href="https://herbiebradley.com/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+  <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/herbie.png" alt="HB"></a>
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>The Lottery Ticket Hypothesis</h1>
+<p class="subtitle">January 30, 2020</p>
+
+<p>The Lottery Ticket Hypothesis is an interesting 2019 paper by Jonathan Frankle and Michael Carbin at MIT that attempts to explain the generalisation capability of deep neural networks, and identify situations where a smaller network can be trained to a similar accuracy as a large network. I recently presented this paper for a class and decided to post an extended version of my presentation here.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Deep neural networks are usually highly over-parameterized, containing numerous redundant connections. In other words, in most neural networks the number of parameters is significantly larger than the amount of training data. Empirically, over-parameterization improves optimization speed and generalisation, despite the fact that traditional learning theory says over-parameterization is a recipe for overfitting. However, there have been several attempts to train a network, then keep the “important” connections in the network while stripping away the rest, to improve the computational cost of inference. This technique is called pruning. Typically, a pruning algorithm consists of applying some heuristic to identify redundancies in the weights of a large pre-trained model, such as removing the connections with the smallest weights. The pruned network is then fine-tuned to learn better weights for the remaining connections and compensate for accuracy loss from removing connections.</p>
+
+<p>Recent studies have shown that the connections in a DNN can be pruned by as much as <strong>90%</strong> without reducing test accuracy. However, naively attempting to re-initialize and train a pruned network from scratch gives worse performance than training a larger network and then pruning it. This paper attempts to answer the question of why this happens and propose techniques for identifying situations in which a pruned network will have high accuracy.</p>
+
+<h2 id="the-hypothesis">The Hypothesis</h2>
+
+<p>The authors propose the <strong>Lottery Ticket Hypothesis</strong>:</p>
+
+<p><em>A randomly-initialized, dense neural network contains a subnetwork that is initialized such that - when trained in isolation - it can match or exceed the test accuracy of the original network after training for at most the same number of iterations.</em></p>
+
+<p>To break this down: the subnetwork is a binary mask applied to the initial random parameters. When trained alone with its initialized parameters, this subnetwork can reach an accuracy at least as high as the original network in the same or fewer training iterations. This subnetwork is the winning “lottery ticket” - in this analogy, training a large network is like buying many lottery tickets, which gives a higher chance of “winning”: getting a high accuracy on the task. Almost all possible subnetworks are losing tickets, however the larger the network, the higher the chances that a winning ticket exists.</p>
+
+<p>The paper shows that subnetworks can be found by training a network, removing \(p%\) of the smallest magnitude parameters by fixing their value at 0, then resetting the remaining parameters to their initial values, creating the winning ticket. This is called one-shot pruning - the authors also found that iterative pruning, in which this process is repeated and \(p^\frac{1}{n}\) parameters are pruned over n rounds, creates smaller and equally accurate winning tickets than one-shot pruning.</p>
+
+<h2 id="experiments-and-results">Experiments and Results</h2>
+
+<p>The authors used this procedure to identify winning tickets with fully connected networks on the MNIST dataset, and with convolutional networks on the CIFAR10 image classification dataset. The pruned networks can be as small as <strong>3.6%</strong> of the size of the original (usually 10-20%), but achieve at least as good accuracy in the same training time. In some cases, the winning ticket networks reach higher test accuracy than the original in a shorter training time.</p>
+
+<p><img src="/assets/img/2020/lotteryresults.jpg" alt="Results on ResNet" /></p>
+
+<p>Crucially, when the winning tickets are randomly reinitialized rather than being trained with their original weights, their performance is far worse than the original network. This indicates that the pruned network architecture by itself does not ensure a subnetwork will be a winning ticket - the initialization AND the architecture form the sucessful subnetwork.</p>
+
+<p>The paper also shows that the reason winning tickets are successful is not because their initializations are close to their final values after training, as might be suspected, since the weights of winning tickets change more during training than other parameters. The authors suspect winning tickets may simply be initialized in an area of the loss landscape that is particularly conducive for optimization.</p>
+
+<h2 id="a-final-conjecture">A Final Conjecture</h2>
+
+<p>The authors then arrive at a conjecture (that they do not attempt to prove): <em>SGD seeks out and trains a subset of well-initialized weights.</em> As a result, larger networks are easier to train from scratch, because there are more possible subnetworks that might be winning tickets.</p>
+
+
+    </article>
+    <span class="print-footer">The Lottery Ticket Hypothesis - January 30, 2020 - {"twitter"=>"herbiebradley", "name"=>"Herbie Bradley"}</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li>
+      
+        <li><a href="https://twitter.com/herbiebradley" target="_blank"><i class="icon-twitter" aria-hidden="true"></i></a></li>
+      
+      
+        <li class="github"><a href="http://github.com/herbiebradley" target="_blank"><i class="icon-github"></i></a></li>
+      
+      
+        <li class="linkedin"><a href="https://linkedin.com/in/herbiebradley" target="_blank"><i class="icon-linkedin"></i></a></li>
+      
+      
+        <li class="email"><a href="mailto:example@example.com"><i class="ficon-mail3" aria-hidden="true"></i></a></li>
+      
+    </li>
+<div class="credits">
+<span>&copy; 2025 Herbie Bradley</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>
