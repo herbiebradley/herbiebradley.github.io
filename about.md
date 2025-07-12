@@ -35,5 +35,8 @@ Throughout 2022 and 2023 I was a researcher at [EleutherAI](https://www.eleuther
 
 Before that, I worked on AI applications to climate science & emulation of physical simulations. Before that, I worked on synthetic data for GANs.
 
+Conference publications at: AIES 2023, ICML 2023 (oral), NeurIPS 2023, ICLR 2024, FAccT 2024, ICML 2025.
+I co-organized the [Synthetic Data workshop]([url](https://synthetic-data-iclr.github.io/)) at ICLR 2025.
+
 
 Contact: mail [at] firstnamelastname.com.
