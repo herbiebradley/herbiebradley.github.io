@@ -15,7 +15,7 @@ redirect_from:
 #icon: avatar.jpg
 ---
 <!-- {% marginfigure_right 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
-Hey, I'm Herbie. I try to help make artificial general intelligence go well.
+Hey, I'm Herbie. I work on making the future better with AI.
 
 ### Writing
 
