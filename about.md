@@ -21,6 +21,8 @@ Hey, I'm Herbie. I work on making the future better with AI.
 
 I blog at [AI Pathways](https://www.pathwaysai.org/) with thoughts on technological development & governance, state capacity, and how we can [unfold](https://www.henrikkarlsson.xyz/p/unfolding) better futures.
 
+I recently published [The Great Refactor]([url](https://ifp.org/the-great-refactor/)) for the Institute for Progress. 
+
 ### [Policy entrepeneurship](https://renaissancephilanthropy.org/playbooks/policy-entrepreneurship/)
 
 I advise governments, think tanks, and early stage startups on how they can steer AI development and anticipate its effects.
