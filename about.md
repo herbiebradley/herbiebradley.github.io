@@ -15,13 +15,13 @@ redirect_from:
 #icon: avatar.jpg
 ---
 <!-- {% marginfigure_right 'mn-id-whatever' 'assets/img/portrait_photo.jpg' 'Herbie Bradley<br>Test' %} -->
-Hey, I'm Herbie. I work on making the future better with AI.
+Hey, I'm Herbie. I'm building something new in San Francisco. I like to work on making the future better with AI.
 
 ### Writing
 
 I blog at [AI Pathways](https://www.pathwaysai.org/) with thoughts on technological development & governance, state capacity, and how we can [unfold](https://www.henrikkarlsson.xyz/p/unfolding) better futures.
 
-I recently published [The Great Refactor](https://ifp.org/the-great-refactor/) for the Institute for Progress. 
+Last year I published [The Great Refactor](https://ifp.org/the-great-refactor/) for the Institute for Progress. 
 
 ### [Policy entrepeneurship](https://renaissancephilanthropy.org/playbooks/policy-entrepreneurship/)
 
